@@ -1,0 +1,36 @@
+﻿@model CalcMvcWeb.Models.CalcViewModel
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Calc</h1>
+
+<h4>Add two integers.</h4>
+<hr />
+
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Add">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="Number1" class="control-label"></label>
+                <input asp-for="Number1" class="form-control" />
+                <span asp-validation-for="Number1" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Number2" class="control-label"></label>
+                <input asp-for="Number2" class="form-control" />
+                <span asp-validation-for="Number2" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Submit" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

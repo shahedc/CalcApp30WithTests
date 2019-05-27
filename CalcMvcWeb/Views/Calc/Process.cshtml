@@ -1,0 +1,18 @@
+﻿@model CalcMvcWeb.Models.CalcViewModel
+
+<h2>Processing Numbers...</h2>
+n1= @Model.Number1
+<br />
+n2= @Model.Number2
+<br />
+<form asp-action="Calc">
+    <h4>Processed</h4>
+    <hr />
+    <div class="form-group">
+        The result is:
+        @Html.DisplayFor(m => m.Result)
+    </div>
+</form>
+<div>
+    <a asp-action="Index">Back to Calc</a>
+</div>
