@@ -8,7 +8,8 @@ namespace CalcMvcWeb.Tests
 {
     public class CalcServiceTests
     {
-        [Theory]
+        [Trait("Add and Subtract", "Just add")]
+        [Theory(DisplayName = "Add Numbers")]
         [InlineData(4, 5, 9)]
         [InlineData(2, 3, 5)]
         public void TestAddNumbers(int x, int y, int expectedResult)
@@ -18,6 +19,7 @@ namespace CalcMvcWeb.Tests
             Assert.Equal(expectedResult, result);
         }
 
+        [Trait("Add and Subtract", "Just subtract")]
         [Theory]
         [InlineData(4, 5, -1)]
         [InlineData(12, 3, 9)]
@@ -74,7 +76,6 @@ namespace CalcMvcWeb.Tests
         //[Theory(Skip="this is broken")]
         [Theory]
         [InlineData(1, 0)]
-        //[InlineData(22, 12)]
         public void TestDivideByZero(int x, int y)
         {
             var cs = new CalcService();
