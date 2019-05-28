@@ -3,9 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.28803.452
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CalcMvcWeb", "CalcMvcWeb\CalcMvcWeb.csproj", "{C239DD94-9225-4DB3-92B7-03100ED62ED2}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CalcMvcWeb", "CalcMvcWeb\CalcMvcWeb.csproj", "{C239DD94-9225-4DB3-92B7-03100ED62ED2}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CalcMvcWeb.Tests", "test\CalcMvcWeb.Tests\CalcMvcWeb.Tests.csproj", "{96CD306F-DF11-41E5-B022-6A0761350882}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CalcMvcWeb.Tests", "test\CalcMvcWeb.Tests\CalcMvcWeb.Tests.csproj", "{96CD306F-DF11-41E5-B022-6A0761350882}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

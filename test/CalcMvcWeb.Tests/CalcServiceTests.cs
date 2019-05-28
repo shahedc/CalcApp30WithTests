@@ -8,18 +8,23 @@ namespace CalcMvcWeb.Tests
 {
     public class CalcServiceTests
     {
-        [Trait("Add and Subtract", "Just add")]
+        [Trait("Math Ops", "Simple")]
         [Theory(DisplayName = "Add Numbers")]
         [InlineData(4, 5, 9)]
         [InlineData(2, 3, 5)]
         public void TestAddNumbers(int x, int y, int expectedResult)
         {
+            // 1. Arrange
             var cs = new CalcService();
+
+            // 2. Act 
             var result = cs.AddNumbers(x, y);
+
+            // 3. Assert 
             Assert.Equal(expectedResult, result);
         }
 
-        [Trait("Add and Subtract", "Just subtract")]
+        [Trait("Math Ops", "Simple")]
         [Theory]
         [InlineData(4, 5, -1)]
         [InlineData(12, 3, 9)]
@@ -30,6 +35,7 @@ namespace CalcMvcWeb.Tests
             Assert.Equal(expectedResult, result);
         }
 
+        [Trait("Math Ops", "Harder")]
         [Theory]
         [InlineData(2, 2, 4)]
         [InlineData(12, 2, 24)]
@@ -40,6 +46,7 @@ namespace CalcMvcWeb.Tests
             Assert.Equal(expectedResult, actualResult);
         }
 
+        [Trait("Math Ops", "Misc")]
         [Theory]
         [InlineData(1, false)]
         [InlineData(2, true)]
@@ -50,6 +57,7 @@ namespace CalcMvcWeb.Tests
             Assert.Equal(expectedResult, actualResult);
         }
 
+        [Trait("Math Ops", "Misc")]
         //[Theory(Skip = "Don't run this test for now")]
         [Theory]
         [InlineData(2)]
@@ -74,6 +82,7 @@ namespace CalcMvcWeb.Tests
         }
 
         //[Theory(Skip="this is broken")]
+        [Trait("Math Ops", "Harder")]
         [Theory]
         [InlineData(1, 0)]
         public void TestDivideByZero(int x, int y)
